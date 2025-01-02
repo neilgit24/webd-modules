@@ -1,0 +1,4 @@
+button{color:red;background-color:black;font-size:3rem;width:100px;height:100px}
+#clickers{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:240px}
+#show{width:50%;font-size:3rem}
+body{align-items:center;display:flex;justify-content:center}
