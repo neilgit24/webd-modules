@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LMS - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginPage" class="page active">
+    <h1>Select User</h1>
+    <ul id="userList"></ul>
+    <input type="text" id="newUserName" placeholder="Add new user" />
+    <button id="addUserBtn">Add User</button>
+  </div>
+
+  <div id="homePage" class="page">
+    <header>
+      <h1>Welcome, <span id="currentUserName"></span></h1>
+      <button id="logoutBtn">Logout</button>
+    </header>
+    <h2>Your Courses</h2>
+    <ul id="courseList"></ul>
+    <input type="text" id="newCourseName" placeholder="Add new course" />
+    <button id="addCourseBtn">Add Course</button>
+  </div>
+
+  <div id="coursePage" class="page">
+    <header>
+      <button id="backToHomeBtn">← Back</button>
+      <h1 id="courseTitle"></h1>
+      <button id="logoutBtn2">Logout</button>
+    </header>
+    <nav>
+      <button id="btnCalendar">Calendar</button>
+      <button id="btnChecklist">Checklist</button>
+      <button id="btnNotes">Notes/Resources</button>
+      <button id="btnAssignments">Assignments</button>
+      <button id="btnMisc">Miscellaneous</button>
+    </nav>
+
+    <section id="calendarSection" class="tabContent">
+      <div id="calendarHeader">
+        <button id="prevBtn">‹</button>
+        <h2 id="calendarTitle"></h2>
+        <button id="nextBtn">›</button>
+      </div>
+      <div id="calendarContainer"></div>
+      <div id="dayView" class="hidden">
+        <h3 id="selectedDayTitle"></h3>
+        <ul id="dayEventsList"></ul>
+        <input type="text" id="newEventInput" placeholder="Type here..." />
+        <select id="eventImportanceSelect">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="addEventBtn">Add Event</button>
+        <button id="backToMonthBtn">Back to Month View</button>
+      </div>
+    </section>
+
+    <section id="checklistSection" class="tabContent hidden">
+      <h3>Checklist</h3>
+      <input type="text" id="newChecklistInput" placeholder="Type here..." />
+      <button id="addChecklistBtn">Add</button>
+      <ul id="checklistList"></ul>
+    </section>
+
+    <section id="notesSection" class="tabContent hidden">
+      <h3>Notes / Resources</h3>
+      <textarea id="notesTextarea" placeholder="Type here..."></textarea>
+      <input type="file" id="notesFileInput" />
+      <div id="uploadedFiles"></div>
+    </section>
+
+    <section id="assignmentsSection" class="tabContent hidden">
+      <h3>Assignments</h3>
+      <textarea id="newAssignmentInput" placeholder="Type here..."></textarea>
+      <input type="file" id="assignmentFileInput" multiple />
+      <button id="addAssignmentBtn">Add</button>
+      <ul id="assignmentsList"></ul>
+    </section>
+
+    <section id="miscSection" class="tabContent hidden">
+      <h3>Miscellaneous</h3>
+      <textarea id="miscTextarea" placeholder="Type here..."></textarea>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
